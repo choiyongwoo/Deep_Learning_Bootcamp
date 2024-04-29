@@ -1,0 +1,5 @@
+outs:
+- md5: a2f0d2c865214093b93b82ad9a00b648
+  size: 6656712
+  hash: md5
+  path: crawling_10_20_politics.csv
