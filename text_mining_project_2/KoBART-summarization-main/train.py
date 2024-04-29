@@ -15,8 +15,7 @@ from model import KoBARTConditionalGeneration
 from transformers import PreTrainedTokenizerFast
 from pytorch_lightning.loggers import TensorBoardLogger
 
-# TensorBoard 로거 설정
-tensorboard_logger = TensorBoardLogger("tb_logs", name="my_model")
+
 
 parser = argparse.ArgumentParser(description='KoBART Summarization')
 
@@ -35,7 +34,7 @@ class ArgsBase():
                             help='test file')
         parser.add_argument('--batch_size',
                             type=int,
-                            default=28,
+                            default=40,
                             help='')
         parser.add_argument('--checkpoint',
                             type=str,
@@ -43,7 +42,7 @@ class ArgsBase():
                             help='')
         parser.add_argument('--max_len',
                             type=int,
-                            default=512,
+                            default=200,
                             help='max seq len')
         parser.add_argument('--max_epochs',
                             type=int,
@@ -66,6 +65,7 @@ class ArgsBase():
                             type=float,
                             default=1.0,
                             help='gradient_clipping')
+        
 
 
         return parser
@@ -83,9 +83,10 @@ if __name__ == '__main__':
                         tokenizer,
                         batch_size=args.batch_size,
                         max_len=args.max_len,
-                        num_workers=args.num_workers)
+                        num_workers=4)
     dm.setup("fit")
     
+    wandb_logger = WandbLogger(project="KoBART-summ")
     model = KoBARTConditionalGeneration(args)
     checkpoint_callback = ModelCheckpoint(monitor='val_loss',
                                           dirpath=args.checkpoint,
@@ -101,7 +102,7 @@ if __name__ == '__main__':
                         devices=args.num_gpus,
                         gradient_clip_val=args.gradient_clip_val,
                         callbacks=[checkpoint_callback],
-                        logger=tensorboard_logger
+                        logger=wandb_logger
                         )
     
     trainer.fit(model, dm)
