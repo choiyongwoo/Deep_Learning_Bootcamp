@@ -1,0 +1,5 @@
+outs:
+- md5: c800210f7a2183bef95b1fd49aaf95b5
+  size: 31080012
+  hash: md5
+  path: train.tar.gz
