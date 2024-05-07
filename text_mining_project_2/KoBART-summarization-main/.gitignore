@@ -127,5 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-/test.tsv
+/validation.tsv
+/train2.tsv
 /train.tsv
+/test.tsv
