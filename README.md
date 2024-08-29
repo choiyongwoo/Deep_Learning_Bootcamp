@@ -36,7 +36,7 @@
 |------------|----------------------------------------------------------------------------------|
 | 설명       | AI 면접시 면접자의 감정을 분석하여 답변의 신뢰성 여부를 파악           |
 | 사용 기술  | VIT, MLP-Mixer                                    |
-| 링크       | [얼굴 감정 분석 모델 발표자](https://github.com/choiyongwoo/Deep_Learning_Bootcamp/blob/main/image_project1/image_project1_%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.pdf)|
+| 링크       | [얼굴 감정 분석 모델 발표자료](https://github.com/choiyongwoo/Deep_Learning_Bootcamp/blob/main/image_project1/image_project1_%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.pdf)|
 
 
 ---
@@ -47,6 +47,6 @@
 |------------|----------------------------------------------------------------------------------|
 | 설명       | 자율 주행을 위한 모델과 벼 생육 이상을 판단하는 모델을 통해 생육 이상인 벼를 자동적으로 탐지하는 시스템            |
 | 사용 기술  | SegFomer                          |
-| 링크       | [벼 생육 이상 AI 검출 시스템](https://github.com/choiyongwoo/Deep_Learning_Bootcamp/blob/main/image_project2/image_project2_%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.pdf)|
+| 링크       | [벼 생육 이상 AI 검출 시스템 발표자료](https://github.com/choiyongwoo/Deep_Learning_Bootcamp/blob/main/image_project2/image_project2_%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.pdf)|
 
 
