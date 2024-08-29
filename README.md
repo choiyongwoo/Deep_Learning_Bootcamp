@@ -7,7 +7,7 @@
 + Image Segmentation
 
 # NLP + Linear Regression
-||
+|목차|설명|
 |--|--|
 |주제|경제신문기사 댓글 분석을 통한 총선 여론 조사|
 |설명|자연어 처리 및 클러스터링 을 통해 22대 총선 관련 insight 분석|
